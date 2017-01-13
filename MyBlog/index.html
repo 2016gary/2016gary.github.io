@@ -7,7 +7,6 @@
 		<meta name="keywords" content="" />
 		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
 		<script src="js/jquery.min.js"></script>
-		<script src="js/jquery.poptrox.min.js"></script>
 		<script src="js/skel.min.js"></script>
 		<script src="js/init.js"></script>
 		<noscript>
@@ -16,6 +15,12 @@
 			<link rel="stylesheet" href="css/style-xlarge.css" />
 		</noscript>
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+		
+		<script src="js/jquery.fancybox.js"></script>
+		<link rel="stylesheet" href="css/fancybox/jquery.fancybox.css" />
+		<script src="js/jquery.fancybox.pack.js"></script>
+		<script src="js/jquery.fancybox-buttons.js"></script>
+		<link rel="stylesheet" href="css/fancybox/jquery.fancybox-buttons.css" />
 	</head>
 	<body id="top">
 
@@ -23,7 +28,8 @@
 			<header id="header">
 				<a href="#" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
 				<h1><strong>I am Gary</strong>, here are some<br />
-				 of my tech blogs.<br /></h1>
+				 of my tech blogs, just <br />to help me learn.<br />
+				 </h1>
 			</header>
 
 		<!-- Main -->
@@ -47,39 +53,37 @@
 						<h2>思维导图</h2>
 						<div class="row">
 							<article class="6u 12u$(3) work-item">
-								<a href="images/fulls/01.jpg" class="image fit thumb"><img src="images/thumbs/01.jpg" alt="" /></a>
+								<a href="images/fulls/01.jpg" class="image fit thumb" data-fancybox-group="gallery" title="大数据第1课"><img src="images/thumbs/01.jpg" alt="无法显示该图像" /></a>
 								<h3>Magna sed consequat tempus</h3>
 								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
 							</article>
 							<article class="6u$ 12u$(3) work-item">
-								<a href="images/fulls/02.jpg" class="image fit thumb"><img src="images/thumbs/02.jpg" alt="" /></a>
-								<h3>Ultricies lacinia interdum</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+								<a href="images/fulls/大数据第2课.png" class="image fit thumb" data-fancybox-group="gallery" title="大数据第2课"><img src="images/thumbs/大数据第2课.png" alt="无法显示该图像" /></a>
+								<h3>大数据第2课</h3>
+								<p>配置安装服务器、NTP时间服务器</p>
 							</article>
 							<article class="6u 12u$(3) work-item">
-								<a href="images/fulls/大数据第3课.png" class="image fit thumb"><img src="images/thumbs/大数据第3课.png" alt="" /></a>
+								<a href="images/fulls/大数据第3课.png" class="image fit thumb" data-fancybox-group="gallery" title="大数据第3课"><img src="images/thumbs/大数据第3课.png" alt="无法显示该图像" /></a>
 								<h3>大数据第3课</h3>
 								<p>安装Cloudera Hadoop集群</p>
 							</article>
 							<article class="6u$ 12u$(3) work-item">
-								<a href="images/fulls/04.jpg" class="image fit thumb"><img src="images/thumbs/04.jpg" alt="" /></a>
+								<a href="images/fulls/04.jpg" class="image fit thumb" data-fancybox-group="gallery" title="大数据第4课"><img src="images/thumbs/04.jpg" alt="无法显示该图像" /></a>
 								<h3>Quam neque phasellus</h3>
 								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
 							</article>
 							<article class="6u 12u$(3) work-item">
-								<a href="images/fulls/05.jpg" class="image fit thumb"><img src="images/thumbs/05.jpg" alt="" /></a>
+								<a href="images/fulls/05.jpg" class="image fit thumb" data-fancybox-group="gallery" title="大数据第5课"><img src="images/thumbs/05.jpg" alt="无法显示该图像" /></a>
 								<h3>Nunc enim commodo aliquet</h3>
 								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
 							</article>
 							<article class="6u$ 12u$(3) work-item">
-								<a href="images/fulls/06.jpg" class="image fit thumb"><img src="images/thumbs/06.jpg" alt="" /></a>
-								<h3>Risus ornare lacinia</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+								<a href="images/fulls/大数据第6课.png" class="image fit thumb" data-fancybox-group="gallery" title="大数据第6课"><img src="images/thumbs/大数据第6课.png" alt="无法显示该图像" /></a>
+								<h3>大数据第6课</h3>
+								<p>Sqoop&Hive导入RDBMS数据</p>
 							</article>
 						</div>
 					</section>
-              								
-
 			</div>
 			
 		<!-- Footer -->
@@ -94,6 +98,5 @@
 					<li>Copyright &copy; 2016 Gary</li>
 				</ul>
 			</footer>
-
 	</body>
 </html>

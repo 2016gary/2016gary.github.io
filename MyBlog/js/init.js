@@ -104,22 +104,38 @@
 				}
 
 		// Main Sections: Two.
-		
-			// Lightbox gallery.
-				$('#two').poptrox({
-					caption: function($a) { return $a.next('h3').text(); },
-					overlayColor: '#2c2c2c',
-					overlayOpacity: 0.85,
-					popupCloserText: '',
-					popupLoaderText: '',
-					selector: '.work-item a',
-					usePopupCaption: true,
-					usePopupDefaultStyling: false,
-					usePopupEasyClose: false,
-					usePopupNav: true,
-					windowMargin: (skel.isActive('small') ? 0 : 50)
-				});
-
+					$('a.image').fancybox(
+							{
+								'autoSize' : true,
+								'autoHeight' : true,
+								'autoWidth' : true,
+								'autoResize' : true,
+								'autoCenter' : true,
+								'scrolling' : 'no',
+								'arrows' : true,
+								'closeBtn' : true,
+								'mouseWheel' : false,
+								'modal' : false,
+								'loop' : false,
+								'playSpeed' : 1000,
+								'helpers' : {
+									'title' : {
+										'type' : 'float'
+									},
+									'buttons' : {},
+									'overlay' : {
+										'closeClick' : false
+									}
+								},
+								'afterLoad' : function() {
+									this.title = 'Image '
+											+ (this.index + 1)
+											+ ' of '
+											+ this.group.length
+											+ (this.title ? ' - ' + this.title
+													: '');
+								}
+							});
 	});
 
 })(jQuery);
