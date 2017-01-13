@@ -104,7 +104,7 @@
 				}
 
 		// Main Sections: Two.
-					$('a.image').fancybox(
+					$('.fancybox').fancybox(
 							{
 								'autoSize' : true,
 								'autoHeight' : true,
