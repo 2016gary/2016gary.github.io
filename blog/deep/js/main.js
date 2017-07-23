@@ -103,7 +103,7 @@
 		goToTop();
 		loaderPage();
 
-		document.getElementById("music").volume=0.6;
+		document.getElementById("music").volume=0.8;
 	});
 
 
