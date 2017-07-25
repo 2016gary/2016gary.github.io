@@ -406,19 +406,16 @@ AV.init({
 });
 var count;
 //获取
-var getCounter = AV.Object.createWithoutData('Counter', '597744a1a22b9d006a9f2222');
-getCounter.fetch().then(function () {
-  count = counterFetch.get('count')+1;
+var counter = AV.Object.createWithoutData('Counter', '597744a1a22b9d006a9f2222');
+counter.fetch().then(function () {
+  count = counter.get('count')+1;
   $("#count").text(count);
 }, function (error) {
 });
-//保存
-var SaveCounter = AV.Object.extend('Counter');
-var saveCounter = new SaveCounter();
-saveCounter.set('count',count);
-saveCounter.save().then(function (todo) {
-}, function (error) {
-});
+// 修改属性
+counter.set('count',count);
+// 保存到云端
+counter.save();
 </script>
 </body>
 </html>
