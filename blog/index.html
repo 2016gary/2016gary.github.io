@@ -355,9 +355,9 @@
 	}, function (error) {
 	});
 	// 修改属性
-	AV.Query.doCloudQuery('update Counter set count="'+count+'" where objectId="5977597efe88c272b10c41f6"').then(function (data) {
-	}, function (error) {
-	});
+	var update = AV.Object.createWithoutData('Counter', '5977597efe88c272b10c41f6');
+	update.set('count', count);
+	update.save();
 	</script>
 	</body>
 </html>
