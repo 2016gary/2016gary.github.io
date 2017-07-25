@@ -411,6 +411,7 @@ Window.onload = function (){
 	counter.fetch().then(function () {
 	  count = counter.get('count')+1;
 	  $("#count").text(count);
+	  alert(count);
 	  counter.set('count', count);
 	  counter.save();
 	}, function (error) {
