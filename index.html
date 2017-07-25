@@ -404,18 +404,18 @@ AV.init({
   appId: APP_ID,
   appKey: APP_KEY
 });
-//var count;
+var count;
 //获取
-//var getCounter = AV.Object.createWithoutData('Counter', '');
-//getCounter.fetch().then(function () {
-//  count = Number(counterFetch.get('count'))+1;
-//  $("#count").text(count);
-//}, function (error) {
-//});
+var getCounter = AV.Object.createWithoutData('Counter', '597744a1a22b9d006a9f2222');
+getCounter.fetch().then(function () {
+  count = counterFetch.get('count')+1;
+  $("#count").text(count);
+}, function (error) {
+});
 //保存
 var SaveCounter = AV.Object.extend('Counter');
 var saveCounter = new SaveCounter();
-saveCounter.set('count',1);
+saveCounter.set('count',count);
 saveCounter.save().then(function (todo) {
 }, function (error) {
 });
