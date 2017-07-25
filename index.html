@@ -398,24 +398,24 @@
 <script type="text/javascript" src="js/main.js"></script>
 <script src="https://cdn1.lncld.net/static/js/3.0.2/av-min.js"></script>
 <script type="text/javascript">
-var APP_ID = 'Y4sxcLlfMo80Y1Ayo2wtYFAh-gzGzoHsz';
-var APP_KEY = 'MeDj2CIYkdNV0C60ysY4J7gJ';
-AV.init({
-  appId: APP_ID,
-  appKey: APP_KEY
-});
-var count;
-//获取
-var counter = AV.Object.createWithoutData('Counter', '597744a1a22b9d006a9f2222');
-counter.fetch().then(function () {
-  count = counter.get('count')+1;
-  $("#count").text(count);
-}, function (error) {
-});
-// 修改属性
-AV.Query.doCloudQuery('update Counter set count="'+count+'" where objectId="597744a1a22b9d006a9f2222"').then(function (data) {
-}, function (error) {
-});
+Window.onload = function (){
+	var APP_ID = 'Y4sxcLlfMo80Y1Ayo2wtYFAh-gzGzoHsz';
+	var APP_KEY = 'MeDj2CIYkdNV0C60ysY4J7gJ';
+	AV.init({
+	  appId: APP_ID,
+	  appKey: APP_KEY
+	});
+	var count;
+	//获取
+	var counter = AV.Object.createWithoutData('Counter', '597744a1a22b9d006a9f2222');
+	counter.fetch().then(function () {
+	  count = counter.get('count')+1;
+	  $("#count").text(count);
+	  count.set('count', count);
+	  count.save();
+	}, function (error) {
+	});
+}
 </script>
 </body>
 </html>
