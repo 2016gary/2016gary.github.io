@@ -354,6 +354,7 @@
 	  $("#count").text(count);
 	}, function (error) {
 	});
+	alert(count);
 	// 修改属性
 	var update = AV.Object.createWithoutData('Counter', '5977597efe88c272b10c41f6');
 	update.set('count', count);
