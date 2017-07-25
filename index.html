@@ -372,6 +372,9 @@
 		  <li><a href="https://www.facebook.com/jack.gary.5851" target="_blank"><i class="fa fa-facebook"></i></a></li>
         </ul>
       </div>
+	  <div>
+		<span id="count" class="glyphicon glyphicon-eye-open"></span>
+	  </div>
     </div>
   </div>
 </div>
@@ -393,5 +396,30 @@
 <script type="text/javascript" src="js/contact_me.js"></script> 
 <script type="text/javascript" src="js/owl.carousel.js"></script> 
 <script type="text/javascript" src="js/main.js"></script>
+<script src="https://cdn1.lncld.net/static/js/3.0.2/av-min.js"></script>
+<script type="text/javascript">
+var APP_ID = 'Y4sxcLlfMo80Y1Ayo2wtYFAh-gzGzoHsz';
+var APP_KEY = 'MeDj2CIYkdNV0C60ysY4J7gJ';
+AV.init({
+  appId: APP_ID,
+  appKey: APP_KEY
+});
+var count;
+//获取
+var getCounter = AV.Object.createWithoutData('Counter', '');
+getCounter.fetch().then(function () {
+  count = Number(counterFetch.get('count'))+1;
+  $("#count").text(count);
+}, function (error) {
+});
+//保存
+var SaveCounter = AV.Object.extend('Counter');
+var saveCounter = new SaveCounter();
+saveCounter.set('count',count);
+saveCounter.save().then(function (todo) {
+}, function (error) {
+  console.error(error);
+});
+</script>
 </body>
 </html>
