@@ -346,9 +346,12 @@
 	  appId: APP_ID,
 	  appKey: APP_KEY
 	});
-	var todo = new Todo();
-  todo.set('count', 1);
-  todo.save().then(function (todo) {
+	var TodoFolder = AV.Object.extend('Counter');
+  // 新建对象
+  var todoFolder = new TodoFolder();
+  // 设置名称
+  todoFolder.set('count',1);
+  todoFolder.save().then(function (todo) {
   }, function (error) {
   });
 	</script>
