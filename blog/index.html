@@ -331,7 +331,7 @@
 					<li><a href="mailto:grrbr@sina.com" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
 				</ul>
 				<ul>
-					<li><i class="glyphicon glyphicon-eye-open" style="margin-top:1px;"></i>&nbsp;&nbsp;<span id="count">2</span></li>
+					<li><i class="glyphicon glyphicon-eye-open" style="margin-top:1px;"></i>&nbsp;&nbsp;<span id="count"></span></li>
 				</ul>
 				<ul class="copyright">
 					<li>&copy; 2016 - 2017 Gary</li>
@@ -346,14 +346,18 @@
 	  appId: APP_ID,
 	  appKey: APP_KEY
 	});
-	var TodoFolder = AV.Object.extend('Counter');
-  // 新建对象
-  var todoFolder = new TodoFolder();
-  // 设置名称
-  todoFolder.set('count',1);
-  todoFolder.save().then(function (todo) {
-  }, function (error) {
-  });
+	var count;
+	//获取
+	var counter = AV.Object.createWithoutData('Counter', '5977597efe88c272b10c41f6');
+	counter.fetch().then(function () {
+	  count = counter.get('count')+1;
+	  $("#count").text(count);
+	}, function (error) {
+	});
+	// 修改属性
+	counter.set('count',count);
+	// 保存到云端
+	counter.save();
 	</script>
 	</body>
 </html>
