@@ -10,7 +10,7 @@
 
 	<!-- Bootstrap  -->
 	<link rel="stylesheet" href="css/bootstrap.css">
-	
+	<link rel="stylesheet" type="text/css" href="../../fonts/font-awesome/css/font-awesome.css">
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="css/style.css">
 
@@ -117,14 +117,16 @@
 			  appId: APP_ID,
 			  appKey: APP_KEY
 			});
-			var TodoFolder = AV.Object.extend('Counter');
-  // 新建对象
-  var todoFolder = new TodoFolder();
-  // 设置名称
-  todoFolder.set('count',1);
-  todoFolder.save().then(function (todo) {
-  }, function (error) {
-  });           
+			var count;
+			//获取
+			var counter = AV.Object.createWithoutData('Counter', '5977f2b88d6d810058945ee3');
+			counter.fetch().then(function () {
+			  count = counter.get('count')+1;
+			  $("#count").text(count);
+			  counter.set('count', count);
+			  counter.save();
+			}, function (error) {
+			});          
 		}     
 	}
 	</script>
