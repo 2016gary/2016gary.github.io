@@ -340,7 +340,8 @@
 	
 	<script src="https://cdn1.lncld.net/static/js/3.0.2/av-min.js"></script>
 	<script type="text/javascript">
-	Window.onload = function (){
+	document.onreadystatechange = function () {      
+    if(document.readyState=="complete") {            
 		var APP_ID = 'Y4sxcLlfMo80Y1Ayo2wtYFAh-gzGzoHsz';
 		var APP_KEY = 'MeDj2CIYkdNV0C60ysY4J7gJ';
 		AV.init({
@@ -352,11 +353,13 @@
 		var counter = AV.Object.createWithoutData('Counter', '5977597efe88c272b10c41f6');
 		counter.fetch().then(function () {
 		  count = counter.get('count')+1;
+		  alert(count);
 		  $("#count").text(count);
 		  counter.set('count', count);
 		  counter.save();
 		}, function (error) {
-		});
+		});              
+		}     
 	}
 	</script>
 	</body>
