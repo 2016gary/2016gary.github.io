@@ -87,6 +87,9 @@
 	</div>-->
 
 	<footer>
+		<div>
+			<i class="glyphicon glyphicon-eye-open" style="margin-top:1px;"></i>&nbsp;&nbsp;<span id="count"></span>
+	    </div>
 		<div>&copy; 2016 - 2017 Gary</div>
 	</footer>
 
@@ -104,7 +107,27 @@
 	<script src="js/jquery.waypoints.min.js"></script>
 	<!-- Main -->
 	<script src="js/main.js"></script>
-
+	<script src="https://cdn1.lncld.net/static/js/3.0.2/av-min.js"></script>
+	<script type="text/javascript">
+	document.onreadystatechange = function () {      
+		if(document.readyState=="complete") {            
+			var APP_ID = 'Y4sxcLlfMo80Y1Ayo2wtYFAh-gzGzoHsz';
+			var APP_KEY = 'MeDj2CIYkdNV0C60ysY4J7gJ';
+			AV.init({
+			  appId: APP_ID,
+			  appKey: APP_KEY
+			});
+			var TodoFolder = AV.Object.extend('Counter');
+  // 新建对象
+  var todoFolder = new TodoFolder();
+  // 设置名称
+  todoFolder.set('count',1);
+  todoFolder.save().then(function (todo) {
+  }, function (error) {
+  });           
+		}     
+	}
+	</script>
 	</body>
 </html>
 

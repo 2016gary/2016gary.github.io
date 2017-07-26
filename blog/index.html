@@ -15,7 +15,10 @@
 			<link rel="stylesheet" href="css/style-xlarge.css" />
 		</noscript>
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
-		
+		<!-- Bootstrap -->
+		<link rel="stylesheet" type="text/css"  href="css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
+
 		<script src="js/jquery.fancybox.js"></script>
 		<link rel="stylesheet" href="css/fancybox/jquery.fancybox.css" />
 		<script src="js/jquery.fancybox.pack.js"></script>
@@ -331,7 +334,7 @@
 					<li><a href="mailto:grrbr@sina.com" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
 				</ul>
 				<div>
-					<span id="count">2</span>
+					<i class="glyphicon glyphicon-eye-open" style="margin-top:1px;"></i>&nbsp;&nbsp;<span id="count"></span>
 				</div>
 				<ul class="copyright">
 					<li>&copy; 2016 - 2017 Gary</li>
@@ -341,24 +344,23 @@
 	<script src="https://cdn1.lncld.net/static/js/3.0.2/av-min.js"></script>
 	<script type="text/javascript">
 	document.onreadystatechange = function () {      
-    if(document.readyState=="complete") {            
-		var APP_ID = 'Y4sxcLlfMo80Y1Ayo2wtYFAh-gzGzoHsz';
-		var APP_KEY = 'MeDj2CIYkdNV0C60ysY4J7gJ';
-		AV.init({
-		  appId: APP_ID,
-		  appKey: APP_KEY
-		});
-		var count;
-		//获取
-		var counter = AV.Object.createWithoutData('Counter', '5977597efe88c272b10c41f6');
-		counter.fetch().then(function () {
-		  count = counter.get('count')+1;
-		  alert(count);
-		  $("#count").text(count);
-		  counter.set('count', count);
-		  counter.save();
-		}, function (error) {
-		});              
+		if(document.readyState=="complete") {            
+			var APP_ID = 'Y4sxcLlfMo80Y1Ayo2wtYFAh-gzGzoHsz';
+			var APP_KEY = 'MeDj2CIYkdNV0C60ysY4J7gJ';
+			AV.init({
+			  appId: APP_ID,
+			  appKey: APP_KEY
+			});
+			var count;
+			//获取
+			var counter = AV.Object.createWithoutData('Counter', '5977597efe88c272b10c41f6');
+			counter.fetch().then(function () {
+			  count = counter.get('count')+1;
+			  $("#count").text(count);
+			  counter.set('count', count);
+			  counter.save();
+			}, function (error) {
+			});              
 		}     
 	}
 	</script>

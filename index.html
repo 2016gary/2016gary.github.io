@@ -373,7 +373,7 @@
         </ul>
       </div>
 	  <div>
-		<i class="glyphicon glyphicon-eye-open" style="margin-top:1px;"></i>&nbsp;&nbsp;<span id="count">2</span>
+		<i class="glyphicon glyphicon-eye-open" style="margin-top:1px;"></i>&nbsp;&nbsp;<span id="count"></span>
 	  </div>
     </div>
   </div>
@@ -411,7 +411,6 @@ document.onreadystatechange = function () {
 		var counter = AV.Object.createWithoutData('Counter', '597744a1a22b9d006a9f2222');
 		counter.fetch().then(function () {
 		  count = counter.get('count')+1;
-		  alert(count);
 		  $("#count").text(count);
 		  counter.set('count', count);
 		  counter.save();
