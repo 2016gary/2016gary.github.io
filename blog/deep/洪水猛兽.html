@@ -1,0 +1,137 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<link rel="icon" href="images/Gary.ico" type="img/x-ico" />
+	<title>HOT RODE</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- FOR IE9 below -->
+	<script src="js/respond.min.js"></script>
+
+	</head>
+	<body class="single">
+		
+	<div class="fh5co-loader"></div>
+	
+	<div id="page">
+		<div id="fh5co-aside" style="background-image: url(images/WhaleFall.jpeg)">
+			<!-- 遮盖透明度0.5 -->
+			<!--<div class="overlay"></div>-->
+			<nav role="navigation">
+				<ul>
+					<li><a href="../index.html"><i class="icon-home"></i></a></li>
+				</ul>
+			</nav>
+			<div class="page-title">
+				<img src="images/Gary.jpg" alt="无法显示该图像">
+				<span>9月, 2017年</span>
+				<h2>洪水猛兽</h2>
+			</div>
+		</div>
+		<div id="fh5co-main-content">
+			<div class="fh5co-post"> 
+				<div class="fh5co-entry padding">
+					<div>
+						<!-- <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;——如果说生物大爆炸是高阶文明留在这颗星球上的一串代码，那么人类正试图在数学上抹杀自己存在的意义。</p> -->
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2017年的夏天，生活好像没改变什么，但又好像天翻地覆着。日历早已翻过了立秋，暑去秋来，突然脑子里闪现家乡道路两旁伫立着梧桐树的画面，这时候枝丫间应该到处斑驳着好看的翠绿跟青黄，彼此相互吞噬着，直到一方罢休。年幼的时候骑着单车匆匆驶过，即使免不了迟到罚站也仍然会回头流连，如电影大特写般放大瞳孔直至看见风经过的每一个细节。</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;人总是容易被时间所欺骗，被远方扣住心弦，却忽略身边的细枝末节，像一直期待着什么，等待着现实在某一天突兀的出现在眼前，然后表现得像个错愕的迷路者那样享受那一刻的自我慰藉。</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;时间如洪水猛兽，已磨去年少的棱角，但炽热的灵魂一直都在。</p>
+					</div>
+					<div style="margin-top: 100px;">
+						<audio id="music" style="width:100%;" autoplay="autoplay" controls="controls" controlsList="" loop="loop" preload="auto"
+						src="music/V.A. - 마주보며 걷기.mp3">
+							你的浏览器不支持该背景音乐
+						</audio>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- 上下页 -->
+	<!--<div class="fh5co-navigation">
+		<div class="fh5co-cover prev fh5co-cover-sm" style="background-image: url(images/demo1.jpg)">
+			<div class="overlay"></div>
+
+			<a class="copy" href="#">
+				<div class="display-t">
+					<div class="display-tc">
+						<div>
+							<span>上一篇</span>
+							<h2>待续</h2>
+						</div>
+					</div>
+				</div>
+			</a>
+		</div>
+		<div class="fh5co-cover next fh5co-cover-sm" style="background-image: url(images/demo2.jpg)">
+			<div class="overlay"></div>
+			<a class="copy" href="#">
+				<div class="display-t">
+					<div class="display-tc">
+						<div>
+							<span>下一篇</span>
+							<h2>待续</h2>
+						</div>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>-->
+
+	<footer>
+		<div>
+			<i class="glyphicon glyphicon-eye-open" style="margin-top:1px;"></i>&nbsp;&nbsp;<span id="count"></span>
+	    </div>
+		<div>&copy; 2016 - 2017 Gary</div>
+	</footer>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+	
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Main -->
+	<script src="js/main.js"></script>
+	<script src="https://cdn1.lncld.net/static/js/3.0.2/av-min.js"></script>
+	<script type="text/javascript">
+	document.onreadystatechange = function () {      
+		if(document.readyState=="complete") {            
+			var APP_ID = 'Y4sxcLlfMo80Y1Ayo2wtYFAh-gzGzoHsz';
+			var APP_KEY = 'MeDj2CIYkdNV0C60ysY4J7gJ';
+			AV.init({
+			  appId: APP_ID,
+			  appKey: APP_KEY
+			});
+			var count;
+			//获取
+			var counter = AV.Object.createWithoutData('Counter', '5977f2b88d6d810058945ee3');
+			counter.fetch().then(function () {
+			  count = counter.get('count')+1;
+			  $("#count").text(count);
+			  counter.set('count', count);
+			  counter.save();
+			}, function (error) {
+			});          
+		} 
+	}
+	</script>
+	</body>
+</html>
+
