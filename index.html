@@ -38,14 +38,45 @@
 <!-- Header -->
 <header class="intro">
   <div class="intro-body">
-    <div class="container">
-      <div class="row">
-        <div class="intro-text">
-          <h1>Hi, I'm Gary</h1>
-          <p>施工中。。。</p>
-          <a href="#about" class="btn btn-default btn-lg page-scroll">About Me</a> <a href="#projects" class="btn btn-default btn-lg page-scroll">My Projects</a></div>
+  	<!-- Carousel start -->
+  	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1" class=""></li>
+        <li data-target="#myCarousel" data-slide-to="2" class=""></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="item active" style="text-align:center;">
+          <img class="first-slide" src="img/carousel/cnn.jpg" alt="First slide" style="display:inline-block;">
+          <div class="container">
+            <div class="carousel-caption">
+              <h3 style="color:#616e7c;">Convolutional neural network</h3>
+              <p><a class="btn btn-lg btn-default" href="#" style="background-color:#337ab7;color:#fff;">My Github</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item" style="text-align:center;">
+          <img class="second-slide" src="img/carousel/rnn.jpg" alt="Second slide" style="display:inline-block;">
+          <div class="container">
+            <div class="carousel-caption">
+              <h3 style="color:#616e7c;">Recurrent neural network</h3>
+              <p><a class="btn btn-lg btn-default" href="#" style="background-color:#337ab7;color:#fff;">My Github</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item" style="text-align:center;">
+          <img class="third-slide" src="img/carousel/gan.jpg" alt="Third slide" style="display:inline-block;">
+          <div class="container">
+            <div class="carousel-caption">
+              <h3 style="color:#616e7c;">Generative Adversarial Networks</h3>
+              <p><a class="btn btn-lg btn-default" href="#" style="background-color:#337ab7;color:#fff;">My Github</a></p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+	<!-- Carousel end -->
   </div>
 </header>
 <!-- Navigation -->
@@ -95,7 +126,7 @@
       <h2>My Projects</h2>
       <hr>
       <div class="clearfix"></div>
-      <p>Here is a screenshot of some of the open source projects I wrote myself.</p>
+      <p>Here are screenshots of some of my open source projects.</p>
     </div>
     <div class="categories">
       <ul class="cat">
