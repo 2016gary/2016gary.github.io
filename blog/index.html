@@ -24,9 +24,10 @@
 		<script src="js/jquery.fancybox.pack.js"></script>
 		<script src="js/jquery.fancybox-buttons.js"></script>
 		<link rel="stylesheet" href="css/fancybox/jquery.fancybox-buttons.css" />
+		<script src="js/fakeloader.min.js"></script>
 	</head>
 	<body id="top">
-		<div id="fakeLoader"></div>
+		<div class="fakeLoader"></div>
 
 		<!-- Header -->
 			<header id="header" name="top">
@@ -352,15 +353,15 @@
 		}     
 	}
 	</script>
-
-	<script src="js/fakeloader.min.js"></script>
+	
 	<script type="text/javascript">
-		$("#fakeloader").fakeLoader({
-		  timeToHide:1200,
-		  zIndex:"999",
-		  spinner:"spinner4",
-		  bgColor:"#2ecc71"
-		});
+		$(document).ready(function(){
+            $(".fakeloader").fakeLoader({
+                timeToHide:1200,
+                bgColor:"#3498db",
+                spinner:"spinner4"
+            });
+        });
 	</script>
 	</body>
 </html>
