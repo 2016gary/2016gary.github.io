@@ -18,7 +18,7 @@
 		<!-- Bootstrap -->
 		<link rel="stylesheet" type="text/css"  href="../css/bootstrap.css">
 		<link rel="stylesheet" type="text/css" href="../fonts/font-awesome/css/font-awesome.css">
-
+		<link rel="stylesheet" type="text/css" href="css/fakeloader.css">
 		<script src="js/jquery.fancybox.js"></script>
 		<link rel="stylesheet" href="css/fancybox/jquery.fancybox.css" />
 		<script src="js/jquery.fancybox.pack.js"></script>
@@ -26,6 +26,7 @@
 		<link rel="stylesheet" href="css/fancybox/jquery.fancybox-buttons.css" />
 	</head>
 	<body id="top">
+		<div id="fakeLoader"></div>
 
 		<!-- Header -->
 			<header id="header" name="top">
@@ -350,6 +351,16 @@
 			});              
 		}     
 	}
+	</script>
+
+	<script src="js/fakeloader.min.js"></script>
+	<script type="text/javascript">
+		$("#fakeloader").fakeLoader({
+		  timeToHide:1200,
+		  zIndex:"999",
+		  spinner:"spinner4",
+		  bgColor:"#2ecc71"
+		});
 	</script>
 	</body>
 </html>
