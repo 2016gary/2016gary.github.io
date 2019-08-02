@@ -355,11 +355,13 @@
 
 	<script src="js/fakeLoader.min.js"></script>
 	<script type="text/javascript">
-		$("#fakeLoader").fakeLoader({
-			timeToHide:1200,
-			zIndex:"999",
-			bgColor:"#333",
-			spinner:"spinner6"
+		$(document).ready(function(){
+			$("#fakeLoader").fakeLoader({
+				timeToHide:1200,
+				zIndex:"999",
+				bgColor:"#333",
+				spinner:"spinner6"
+			});
 		});
 	</script>
 	</body>
