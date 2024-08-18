@@ -8,7 +8,7 @@
 ### <a href="#chapter1">1.Spark概览</a>
 ### <a href="#chapter2">2.最基础的数据类型：RDD & Partition</a>
 ### <a href="#chapter3">3.DataFrame & Dataset</a>
-### <a href="#chapter4">4.算子</a>
+### <a href="#chapter4">4.RDD算子</a>
 ### <a href="#chapter5">5.Spark集群架构</a>
 ### <a href="#chapter6">6.Spark运行模式</a>
 ### <a href="#chapter7">7.Spark运行流程：任务 & 资源调度</a>
@@ -83,7 +83,7 @@
 
 ---
 
-# <a name="chapter4">4.算子</a>
+# <a name="chapter4">4.RDD算子</a>
 <img src="./images/rdd_op.png"  alt="无法显示该图片" />
 
 <img src="./images/rdd_type.png"  alt="无法显示该图片" />
@@ -99,7 +99,7 @@
 
 <img src="./images/rdd_op_type.png"  alt="无法显示该图片" />
 ---
-# <a name="chapter5">5.Spark架构</a>
+# <a name="chapter5">5.Spark集群架构</a>
 ### Spark架构采用了分布式计算中的Master-Slave模型，整个集群分为Master节点和Worker节点，Master节点上常驻Master守护进程，负责管理全部的Worker节点，Worker节点上常驻Worker守护进程，负责与Master节点通信并管理executors
 <img src="./images/master-slave.png"  alt="无法显示该图片" />
 
