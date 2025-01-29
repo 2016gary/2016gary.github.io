@@ -18,15 +18,58 @@
 		<!-- Bootstrap -->
 		<link rel="stylesheet" type="text/css"  href="../css/bootstrap.css">
 		<link rel="stylesheet" type="text/css" href="../fonts/font-awesome/css/font-awesome.css">
-		<link rel="stylesheet" type="text/css" href="css/fakeLoader.css">
 		<script src="js/jquery.fancybox.js"></script>
 		<link rel="stylesheet" href="css/fancybox/jquery.fancybox.css" />
 		<script src="js/jquery.fancybox.pack.js"></script>
 		<script src="js/jquery.fancybox-buttons.js"></script>
 		<link rel="stylesheet" href="css/fancybox/jquery.fancybox-buttons.css" />
+		<style>
+			/* Loading 层的样式 */
+			#loading {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: rgba(255, 255, 255, 0.9);
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				z-index: 9999;
+			}
+
+			/* Loading 动画样式 */
+			.spinner {
+				border: 4px solid #f3f3f3; /* Light gray */
+				border-top: 4px solid #3498db; /* Blue */
+				border-radius: 50%;
+				width: 50px;
+				height: 50px;
+				animation: spin 2s linear infinite;
+			}
+
+			/* Spinner 动画 */
+			@keyframes spin {
+				0% { transform: rotate(0deg); }
+				100% { transform: rotate(360deg); }
+			}
+
+			/* 页面内容的样式 */
+			#header {
+				display: none; /* 初始隐藏内容，直到加载完成 */
+			}
+
+			#main {
+				display: none; /* 初始隐藏内容，直到加载完成 */
+			}
+		</style>
 	</head>
 	<body id="top">
-		<div id="fakeLoader"></div>
+
+		<!-- Loading Layer -->
+		<div id="loading">
+			<div class="spinner"></div>
+		</div>
 
 		<!-- Header -->
 			<header id="header" name="top">
@@ -249,5 +292,21 @@
 					<li>&copy; 2016 - 2099 Gary</li>
 				</ul>
 			</footer>
+
+			<script>
+				window.addEventListener('load', function() {
+					// 等待所有资源加载完成后移除 loading 层
+					const loading = document.getElementById('loading');
+					const header = document.getElementById('header');
+					const main = document.getElementById('main');
+
+					// 等待页面加载完成后，隐藏 loading，显示内容
+					setTimeout(() => {
+						loading.style.display = 'none'; // 隐藏 loading 层
+						header.style.display = 'block'; // 显示页面内容
+						main.style.display = 'block'; // 显示页面内容
+					}, 100); // 你可以调节这个时间，保证样式渲染的时间足够
+				});
+			</script>
 	</body>
 </html>
