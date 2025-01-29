@@ -19,15 +19,15 @@
 
 <img src="./images/大数据第1课.png"  alt="无法显示该图片" />
 
-<img src="./images/CentOS的安装.png" size="150%" alt="无法显示该图片" />
+<img src="./images/CentOS的安装.png"  alt="无法显示该图片" />
 
 ---
 # <a name="chapter2">2.搭建Cloudera Hadoop集群</a>
 
-<img src="./images/大数据第2课.png" size="150%" alt="无法显示该图片" />
+<img src="./images/大数据第2课.png"  alt="无法显示该图片" />
 
 
-<img src="./images/大数据第3课.png" size="150%"  alt="无法显示该图片" />
+<img src="./images/大数据第3课.png"  alt="无法显示该图片" />
 
 ---
 # <a name="chapter3">3.YARN&HDFS</a>
@@ -84,3 +84,5 @@
 <img src="./images/大数据第10课.png"  alt="无法显示该图片" />
 
 ---
+
+# <a href="#cloudera_top">Jump to the top</a>
