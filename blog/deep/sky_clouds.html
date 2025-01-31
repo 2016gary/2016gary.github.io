@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-	<link rel="icon" href="images/Gary.ico" type="img/x-ico" />
+	<!-- <link rel="icon" href="images/Gary.ico" type="img/x-ico" /> -->
 	<title>《未命名文件夹》- Gary</title>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -32,9 +32,9 @@
 				</ul>
 			</nav>
 			<div class="page-title">
-				<img src="images/Gary.jpg" alt="无法显示该图像">
-				<span>2019年5月,于北京 </span>
+				<!--<img src="images/Gary.jpg" alt="无法显示该图像">-->
 				<h2 style="font-size:30px">未命名文件夹</h2>
+				<span>2019年5月,于北京</span>
 			</div>
 		</div>
 		<div id="fh5co-main-content">
@@ -88,10 +88,7 @@
 	</div>-->
 
 	<footer>
-		<div>
-			<i class="glyphicon glyphicon-eye-open" style="margin-top:1px;"></i>&nbsp;&nbsp;<span id="count"></span>
-	    </div>
-		<div>&copy; 2016 - 2020 Gary</div>
+		<div>&copy; 2016 - 2025 Gary</div>
 	</footer>
 
 	<div class="gototop js-top">
@@ -108,29 +105,7 @@
 	<script src="js/jquery.waypoints.min.js"></script>
 	<!-- Main -->
 	<script src="js/main.js"></script>
-	<script src="https://cdn1.lncld.net/static/js/3.0.2/av-min.js"></script>
 	<script type="text/javascript">
-	document.onreadystatechange = function () {      
-		if(document.readyState=="complete") {            
-			var APP_ID = 'Y4sxcLlfMo80Y1Ayo2wtYFAh-gzGzoHsz';
-			var APP_KEY = 'MeDj2CIYkdNV0C60ysY4J7gJ';
-			AV.init({
-			  appId: APP_ID,
-			  appKey: APP_KEY
-			});
-			var count;
-			//获取
-			var counter = AV.Object.createWithoutData('Counter', '5977f2b88d6d810058945ee3');
-			counter.fetch().then(function () {
-			  count = counter.get('count')+1;
-			  $("#count").text(count);
-			  counter.set('count', count);
-			  counter.save();
-			}, function (error) {
-			});          
-		} 
-	}
-
 	function audioAutoPlay(id){  
 		var audio = document.getElementById(id);
         play = function(){  
