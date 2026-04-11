@@ -1,273 +1,197 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
-<head>
-<link rel="icon" href="img/Gary.ico" type="img/x-ico" />
-<title>Gary</title>
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
+	<head>
+		<link rel="icon" href="images/Gary.ico" type="img/x-ico" />
+		<title>Gary's Blog</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-xlarge.css" />
+		</noscript>
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+		<!-- Bootstrap -->
+		<link rel="stylesheet" type="text/css"  href="../css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="../fonts/font-awesome/css/font-awesome.css">
+		<script src="js/jquery.fancybox.js"></script>
+		<link rel="stylesheet" href="css/fancybox/jquery.fancybox.css" />
+		<script src="js/jquery.fancybox.pack.js"></script>
+		<script src="js/jquery.fancybox-buttons.js"></script>
+		<link rel="stylesheet" href="css/fancybox/jquery.fancybox-buttons.css" />
+		<style>
+			/* Loading 层的样式 */
+			#loading {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: rgba(255, 255, 255, 0.9);
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				z-index: 9999;
+			}
 
-<!-- Favicons
-    ================================================== -->
-<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-<link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+			/* Loading 动画样式 */
+			.spinner {
+				border: 4px solid #f3f3f3; /* Light gray */
+				border-top: 4px solid #3498db; /* Blue */
+				border-radius: 50%;
+				width: 50px;
+				height: 50px;
+				animation: spin 2s linear infinite;
+			}
 
-<!-- Bootstrap -->
-<link rel="stylesheet" type="text/css"  href="css/bootstrap.css">
-<link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
+			/* Spinner 动画 */
+			@keyframes spin {
+				0% { transform: rotate(0deg); }
+				100% { transform: rotate(360deg); }
+			}
 
-<!-- Stylesheet
-    ================================================== -->
-<link rel="stylesheet" type="text/css"  href="css/style.css">
-<link rel="stylesheet" type="text/css" href="css/prettyPhoto.css">
+			/* 页面内容的样式 */
+			#header {
+				display: none; /* 初始隐藏内容，直到加载完成 */
+			}
 
-<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-</head>
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+			#main {
+				display: none; /* 初始隐藏内容，直到加载完成 */
+			}
+		</style>
+	</head>
+	<body id="top">
 
-<!-- Header -->
-<header class="intro">
-  <div class="intro-body">
-  	
-  </div>
-</header>
-<!-- Navigation -->
-<div id="nav">
-  <nav class="navbar navbar-custom">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse"> <i class="fa fa-bars"></i></button>
-        <a class="navbar-brand" href="blog/index.html" target="_blank">Blog</a></div>
-      
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-        <ul class="nav navbar-nav">
-          <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-          <li class="hidden"> <a href="#page-top"></a> </li>
-          <li> <a class="page-scroll" href="#about">About</a> </li>
-          <li> <a class="page-scroll" href="#projects">Projects</a> </li>
-          <li> <a class="page-scroll" href="#skills">Skills</a> </li>
-          <li> <a class="page-scroll" href="#resume">Resume</a> </li>
-          <li> <a class="page-scroll" href="#contact">Contact</a> </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-</div>
-<!-- About Section -->
-<div id="about">
-  <div class="container">
-    <div class="section-title text-center center">
-      <h2>About me</h2>
-      <hr>
-    </div>
-    <div class="row">
-      <div class="col-md-12 text-center"><img src="img/about.png" class="img-responsive"></div>
-      <div class="col-md-8 col-md-offset-2">
-        <div class="about-text">
-          <p class="text-center">Big Data & Deep Learning & Full Stack Engineer.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Projects Section -->
-<div id="projects">
-  <div class="container">
-    <div class="section-title text-center center">
-      <h2>My Projects</h2>
-      <hr>
-      <div class="clearfix"></div>
-      <p>Here are screenshots of some of my open source projects.</p>
-    </div>
-    <div class="categories">
-      <ul class="cat">
-        <li>
-          <ol class="type">
-            <li><a href="#" data-filter="*" class="active">All</a></li>
-            <li><a href="#" data-filter=".data">Big Data</a></li>
-            <li><a href="#" data-filter=".AI">Deep Learning</a></li>
-            <li><a href="#" data-filter=".Java">Java Web</a></li>
-          </ol>
-        </li>
-      </ul>
-      <div class="clearfix"></div>
-    </div>
-    <div class="row">
-      <div class="portfolio-items">
-		<div class="col-sm-6 col-md-3 col-lg-3 data">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/03.png" title="项目地址：https://github.com/2016gary/hummingbirdSystem" rel="prettyPhoto">
-              <div class="hover-text">
-                <h4>蜂鸟数据分析平台</h4>
-                <small>Big Data</small>
-                <div class="clearfix"></div>
-                <i class="fa fa-search"></i> </div>
-              <img src="img/portfolio/03.png" class="img-responsive" alt="蜂鸟数据分析平台"> </a> </div>
-          </div>
-        </div>
-		<div class="col-sm-6 col-md-3 col-lg-3 AI">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/02.png" title="项目地址：https://github.com/2016gary/TensorFlow/blob/master/ImplementConvolution/ImplementCon.py" rel="prettyPhoto">
-              <div class="hover-text">
-                <h4>纯Python实现CNN卷积操作</h4>
-                <small>Deep Learning</small>
-                <div class="clearfix"></div>
-                <i class="fa fa-search"></i> </div>
-              <img src="img/portfolio/02.png" class="img-responsive" alt="纯Python实现CNN卷积操作"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3 col-lg-3 Java">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/01.png" title="项目地址：https://github.com/2016gary/labReservation" rel="prettyPhoto">
-              <div class="hover-text">
-                <h4>实验室预约系统</h4>
-                <small>Java Web</small>
-                <div class="clearfix"></div>
-                <i class="fa fa-search"></i> </div>
-              <img src="img/portfolio/01.png" class="img-responsive" alt="实验室预约系统"> </a> </div>
-          </div>
-        </div>
-		<div class="col-sm-6 col-md-3 col-lg-3 AI">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/04.png" title="项目地址：https://github.com/2016gary/RealTimeIR" rel="prettyPhoto">
-              <div class="hover-text">
-                <h4>在线图像识别</h4>
-                <small>Deep Learning</small>
-                <div class="clearfix"></div>
-                <i class="fa fa-search"></i> </div>
-              <img src="img/portfolio/04.png" class="img-responsive" alt="在线图像识别"> </a> </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Skills Section -->
-<div id="skills" class="text-center">
-  <div class="container">
-    <div class="section-title center">
-      <h2>My Skills</h2>
-      <hr>
-    </div>
-    <div class="row">
-	  <div class="col-md-3 col-sm-6 skill"> <span class="chart" data-percent="85"> <span class="percent">85</span> </span>
-        <h4>Hadoop2.x+Spark2.x+Kafka+Redis+Hive</h4>
-      </div>
-	  <div class="col-md-3 col-sm-6 skill"> <span class="chart" data-percent="75"> <span class="percent">75</span> </span>
-        <h4>Deep Learning+Python3+Tensorflow1.2</h4>
-      </div>
-	  <div class="col-md-3 col-sm-6 skill"> <span class="chart" data-percent="95"> <span class="percent">95</span> </span>
-	  	<h4>Java8+Spring Framework+Spring MVC+Mybatis+Hibernate+Spring JDBC+Shiro+MySQL+Tomcat</h4>
-      </div>
-	  <div class="col-md-3 col-sm-6 skill"> <span class="chart" data-percent="95"> <span class="percent">95</span> </span>
-	  	<h4>HTML5+JavaScript+CSS3+jQuery+ECharts</h4>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Resume Section -->
-<div id="resume" class="text-center">
-  <div class="container">
-    <div class="section-title center">
-      <h2>Experience</h2>
-      <hr>
-    </div>
-    <div class="row">
-      <div class="col-lg-12">
-        <ul class="timeline">
-          <li class="timeline-inverted">
-            <div class="timeline-image">
-              <h4>  2019 <br>
-                - <br>
-                Now </h4>
-            </div>
-            <div class="timeline-panel">
-			  <br>
-			  <br>
-              <div class="timeline-heading">
-                <h4><img src="img/resume-logo/baidu.png" alt="无法显示该图片"> Baidu </h4>
-                <h4 class="subheading">Full Stack Development Engineer</h4>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="section-title center">
-      <h2>Education</h2>
-      <hr>
-    </div>
-    <div class="row">
-      <div class="col-lg-12">
-        <ul class="timeline">
-          
-          <!-- Education Section-->
-          <li>
-            <div class="timeline-image">
-              <h4> 2012 <br>
-                - <br>
-                 2016 </h4>
-            </div>
-            <div class="timeline-panel">
-			  <br>
-			  <br>
-              <div class="timeline-heading">
-                <h4><img src="img/resume-logo/NUC.png" alt="无法显示该图片"> The North University of China </h4>
-                <h4 class="subheading">Bachelor of Engineering</h4>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Contact Section -->
-<div id="contact" class="text-center">
-  <div class="container">
-    <div class="section-title center">
-      <h2>Contact me</h2>
-      <hr>      
-    </div>
-    <div class="col-md-8 col-md-offset-2">
-      <form name="sentMessage" id="contactForm" novalidate>
-        <a href="mailto:grrbr@sina.com" class="btn btn-default">Send me mail</a>
-      </form>
-	  <p>Or through the following ways</p>
-      <div class="social">
-        <ul>          
-          <li><a href="https://github.com/2016gary" target="_blank"><i class="fa fa-github"></i></a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-<div id="footer">
-  <div class="container text-center">
-    <div class="fnav">
-      <p>&copy; 2016 - 2025 Gary</p>
-    </div>
-    <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1275872103'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s23.cnzz.com/z_stat.php%3Fid%3D1275872103%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>	  
-  </div>
-</div>
-<script type="text/javascript" src="js/jquery.1.11.1.js"></script> 
-<script type="text/javascript" src="js/bootstrap.js"></script>
-<script type="text/javascript" src="js/easypiechart.js"></script> 
-<script type="text/javascript" src="js/jquery.prettyPhoto.js"></script> 
-<script type="text/javascript" src="js/jquery.isotope.js"></script> 
-<script type="text/javascript" src="js/jquery.counterup.js"></script> 
-<script type="text/javascript" src="js/waypoints.js"></script> 
-<script type="text/javascript" src="js/jqBootstrapValidation.js"></script> 
-<script type="text/javascript" src="js/contact_me.js"></script> 
-<script type="text/javascript" src="js/owl.carousel.js"></script> 
-<script type="text/javascript" src="js/main.js"></script>
-</body>
+		<!-- Loading Layer -->
+		<div id="loading">
+			<div class="spinner"></div>
+		</div>
+
+		<!-- Header -->
+			<header id="header" name="top">
+				<a class="myImage image avatar"><img src="images/avatar.png" alt="无法显示该图像" /><h1 style="text-align:center;margin-top:10px;"><strong>Gary</strong></h1></a>
+			</header>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- One -->
+					<section id="one">
+						<h2>技术相关</h2>
+						<br>
+						<h4>使用TensorFlow训练CNN等模型实践</h4>
+						<ul class="actions" style="text-align:right;">
+							<li><a href="https://github.com/2016gary/TensorFlow/" class="button" target="_blank">查看详情</a></li>
+						</ul>
+						<h4>一步一步Backpropagation反向传播示例</h4>
+						<ul class="actions" style="text-align:right;">
+							<li><a href="document/一步一步Backpropagation反向传播示例.pdf" target="_blank" class="button">查看详情</a></li>
+						</ul>
+						<h4>Spring Cloud微服务架构入门教程</h4>
+						<ul class="actions" style="text-align:right;">
+							<li><a href="https://github.com/2016gary/Spring-Cloud/" class="button" target="_blank">查看详情</a></li>
+						</ul>
+						<h4>广告系统架构：如何构建生产环境的广告系统</h4>
+						<ul class="actions" style="text-align:right;">
+							<li><a href="document/广告系统/" class="button" target="_blank">查看详情</a></li>
+						</ul>
+						<h4>Kafka Streams流式计算入门教程</h4>
+						<ul class="actions" style="text-align:right;">
+							<li><a href="https://github.com/2016gary/Stream-Computing/" class="button" target="_blank">查看详情</a></li>
+						</ul>
+						<h4>Spark入门教程</h4>
+						<ul class="actions" style="text-align:right;">
+							<li><a href="document/Spark/" class="button" target="_blank">查看详情</a></li>
+						</ul>
+						<h4>Hadoop MapReduce入门实践</h4>
+						<ul class="actions" style="text-align:right;">
+							<li><a href="https://github.com/2016gary/Hadoop-Streaming/" class="button" target="_blank">查看详情</a></li>
+						</ul>
+						<h4>G1垃圾回收器入门</h4>
+						<ul class="actions" style="text-align:right;">
+							<li><a href="document/JVM/G1/" class="button" target="_blank">查看详情</a></li>
+						</ul>
+						<h4>Java Garbage Collection基础</h4>
+						<ul class="actions" style="text-align:right;">
+							<li><a href="document/JVM/GC/" class="button" target="_blank">查看详情</a></li>
+						</ul>
+						<h4>Cloudera大数据入门教程</h4>
+						<ul class="actions" style="text-align:right;">
+							<li><a href="document/Cloudera大数据/" target="_blank" class="button">查看详情</a></li>
+						</ul>
+						<h4>Cloudera Data Analyst Training-Pig入门教程</h4>
+						<ul class="actions" style="text-align:right;">
+							<li><a href="document/Cloudera_Data_Analyst_Training-Pig.html" target="_blank" class="button">查看详情</a></li>
+						</ul>
+						<!-- <header class="major">
+							<h4>BOW（Bag of Words）模型</h4>
+						</header>
+						<ul class="actions" style="text-align:right;">
+							<li><a href="images/DL/BOW（Bag of Words）.png" class="button fancybox" title="BOW（Bag of Words）">查看详情</a></li>
+						</ul>
+						<header class="major">
+							<h4>Word2Vec模型</h4>
+						</header>
+						<ul class="actions" style="text-align:right;">
+							<li><a href="images/DL/Word2Vec.png" class="button fancybox" title="Word2Vec">查看详情</a></li>
+						</ul> -->
+					</section>
+
+				<!-- Six -->
+					<!-- <section id="six">
+						<h2>琐碎</h2>
+						<br>
+						<h4>《未命名文件夹》</h4>
+						<ul class="actions" style="text-align:right;">
+							<li><a href="deep/sky_clouds.html" class="button">阅读</a></li>
+						</ul>
+						<h4>《洪水猛兽》</h4>
+						<ul class="actions" style="text-align:right;">
+							<li><a href="deep/whale_fall.html" class="button">阅读</a></li>
+						</ul>
+						<h4>《Frozen Seconds》</h4>
+						<ul class="actions" style="text-align:right;">
+							<li><a href="https://unsplash.com/@mister_gary" target="_blank" class="button">浏览</a></li>
+						</ul>
+						<h4>《窗外》</h4>
+						<ul class="actions" style="text-align:right;">
+							<li><a href="http://v.youku.com/v_show/id_XMTcyNjI0OTE3Mg==.html?spm=a2h0k.8191407.0.0&from=s1.8-1-1.2" target="_blank" class="button">播放</a></li>
+						</ul>
+					</section> -->
+			</div>
+			
+			<a href="#top" style="position: fixed;bottom: 20px;right: 25px;z-index: 100;"><img src="images/top.gif" style="height: 100px;" alt="无法显示该图像" /></a>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<ul class="icons">
+					<li><a href="https://github.com/2016gary" target="_blank" class="icon fa-github"><span class="label">Github</span></a></li>
+					<li><a href="mailto:grrbr@sina.com" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; 2016 - 2025 Gary</li>
+				</ul>
+			</footer>
+
+			<script>
+				window.addEventListener('load', function() {
+					// 等待所有资源加载完成后移除 loading 层
+					const loading = document.getElementById('loading');
+					const header = document.getElementById('header');
+					const main = document.getElementById('main');
+
+					// 等待页面加载完成后，隐藏 loading，显示内容
+					setTimeout(() => {
+						loading.style.display = 'none'; // 隐藏 loading 层
+						header.style.display = 'block'; // 显示页面内容
+						main.style.display = 'block'; // 显示页面内容
+					}, 100); // 你可以调节这个时间，保证样式渲染的时间足够
+				});
+			</script>
+	</body>
 </html>
+

@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<!-- <link rel="icon" href="images/Gary.ico" type="img/x-ico" /> -->
+	<title>《未命名文件夹》- Gary</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- FOR IE9 below -->
+	<script src="js/respond.min.js"></script>
+
+	</head>
+	<body class="single">
+		
+	<div class="fh5co-loader"></div>
+	
+	<div id="page">
+		<div id="fh5co-aside" style="background-image: url(images/jeremy_sky_clouds.jpg)">
+			<!-- 遮盖透明度0.5 -->
+			<!--<div class="overlay"></div>-->
+			<nav role="navigation">
+				<ul>
+					<li><a href="../index.html"><i class="icon-home"></i></a></li>
+				</ul>
+			</nav>
+			<div class="page-title">
+				<!--<img src="images/Gary.jpg" alt="无法显示该图像">-->
+				<h2 style="font-size:30px">未命名文件夹</h2>
+				<span>2019年5月,于北京</span>
+			</div>
+		</div>
+		<div id="fh5co-main-content">
+			<div class="fh5co-post"> 
+				<div class="fh5co-entry padding">
+					<div>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;黑暗的班车里，窗外灯红酒绿的霓虹打在身上，稍显光怪陆离。已过立夏，这里还是一如既往的拥堵和柳絮飞扬。工作后开始听后摇滚，有人说后摇很有故事感，总有一根细微神秘的管道连接着这一秒心里的情绪，音乐侵入耳膜后在脑中展开的图景，取决于我们自己。</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;生活又进入了一个新的时间节点，习惯了去倒计时，也许这就是所谓的仪式感。原本以为要开始建立新的状态内心会有些许波澜，没想到最后却平静的理所当然。当你选择了一种生活，你可能不会爱上它，但总会习惯它。周末跟朋友交谈，她提及毕业后会去南方，在嘈杂的live声里我兀自愣了一下，想起了大学时候第一次见面，她在图书馆对我笑的样子。人的情感似乎也遵循着爱因斯坦的相对论，记忆总是被那些对我们物质环境产生很大影响的时刻所左右，以至于模糊掉了很多有意义的瞬间。</p>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;屏幕上红色和绿色交织的柱线，还是涨涨跌跌，中间凹进去的那块像是被勺子挖走的蛋糕。夜深了，起身灭了灯。冰块在玻璃杯子里上下浮动，最后消失不见。</p>
+					</div>
+					<div style="margin-top: 100px;">
+						<audio id="music" style="width:100%;" autoplay="autoplay" controls="controls" controlsList="" loop="loop" preload="auto"
+						src="music/Circadian Eyes - rain.mp3">
+							你的浏览器不支持该背景音乐
+						</audio>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- 上下页 -->
+	<!--<div class="fh5co-navigation">
+		<div class="fh5co-cover prev fh5co-cover-sm" style="background-image: url(images/demo1.jpg)">
+			<div class="overlay"></div>
+
+			<a class="copy" href="#">
+				<div class="display-t">
+					<div class="display-tc">
+						<div>
+							<span>上一篇</span>
+							<h2>待续</h2>
+						</div>
+					</div>
+				</div>
+			</a>
+		</div>
+		<div class="fh5co-cover next fh5co-cover-sm" style="background-image: url(images/demo2.jpg)">
+			<div class="overlay"></div>
+			<a class="copy" href="#">
+				<div class="display-t">
+					<div class="display-tc">
+						<div>
+							<span>下一篇</span>
+							<h2>待续</h2>
+						</div>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>-->
+
+	<footer>
+		<div>&copy; 2016 - 2025 Gary</div>
+	</footer>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+	
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Main -->
+	<script src="js/main.js"></script>
+	<script type="text/javascript">
+	function audioAutoPlay(id){  
+		var audio = document.getElementById(id);
+        play = function(){  
+            audio.play();  
+            document.removeEventListener("touchstart",play, false);  
+        };  
+		audio.play();  
+		document.addEventListener("WeixinJSBridgeReady", function () {  
+			play();  
+		}, false);  
+		document.addEventListener('YixinJSBridgeReady', function() {  
+			play();  
+		}, false);  
+		document.addEventListener("touchstart",play, false);  
+	}
+
+	audioAutoPlay('music');
+	</script>
+	</body>
+</html>
+
