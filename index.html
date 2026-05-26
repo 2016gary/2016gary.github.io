@@ -1,197 +1,210 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<link rel="icon" href="images/Gary.ico" type="img/x-ico" />
-		<title>Gary</title>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
-		<script src="js/jquery.min.js"></script>
-		<script src="js/skel.min.js"></script>
-		<script src="js/init.js"></script>
-		<noscript>
-			<link rel="stylesheet" href="css/skel.css" />
-			<link rel="stylesheet" href="css/style.css" />
-			<link rel="stylesheet" href="css/style-xlarge.css" />
-		</noscript>
-		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
-		<!-- Bootstrap -->
-		<link rel="stylesheet" type="text/css"  href="../css/bootstrap.css">
-		<link rel="stylesheet" type="text/css" href="../fonts/font-awesome/css/font-awesome.css">
-		<script src="js/jquery.fancybox.js"></script>
-		<link rel="stylesheet" href="css/fancybox/jquery.fancybox.css" />
-		<script src="js/jquery.fancybox.pack.js"></script>
-		<script src="js/jquery.fancybox-buttons.js"></script>
-		<link rel="stylesheet" href="css/fancybox/jquery.fancybox-buttons.css" />
-		<style>
-			/* Loading 层的样式 */
-			#loading {
-				position: fixed;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-				background: rgba(255, 255, 255, 0.9);
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				z-index: 9999;
-			}
+<head>
+    <link rel="icon" href="images/Gary.ico" type="img/x-ico"/>
+    <title>Gary</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--[if lte IE 8]>
+    <script src="css/ie/html5shiv.js"></script><![endif]-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/skel.min.js"></script>
+    <script src="js/init.js"></script>
+    <noscript>
+        <link rel="stylesheet" href="css/skel.css"/>
+        <link rel="stylesheet" href="css/style.css"/>
+        <link rel="stylesheet" href="css/style-xlarge.css"/>
+    </noscript>
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="css/ie/v8.css"/><![endif]-->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../fonts/font-awesome/css/font-awesome.css">
+    <script src="js/jquery.fancybox.js"></script>
+    <link rel="stylesheet" href="css/fancybox/jquery.fancybox.css"/>
+    <script src="js/jquery.fancybox.pack.js"></script>
+    <script src="js/jquery.fancybox-buttons.js"></script>
+    <link rel="stylesheet" href="css/fancybox/jquery.fancybox-buttons.css"/>
+    <style>
+        /* Loading 层的样式 */
+        #loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
 
-			/* Loading 动画样式 */
-			.spinner {
-				border: 4px solid #f3f3f3; /* Light gray */
-				border-top: 4px solid #3498db; /* Blue */
-				border-radius: 50%;
-				width: 50px;
-				height: 50px;
-				animation: spin 2s linear infinite;
-			}
+        /* Loading 动画样式 */
+        .spinner {
+            border: 4px solid #f3f3f3; /* Light gray */
+            border-top: 4px solid #3498db; /* Blue */
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 2s linear infinite;
+        }
 
-			/* Spinner 动画 */
-			@keyframes spin {
-				0% { transform: rotate(0deg); }
-				100% { transform: rotate(360deg); }
-			}
+        /* Spinner 动画 */
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
 
-			/* 页面内容的样式 */
-			#header {
-				display: none; /* 初始隐藏内容，直到加载完成 */
-			}
+        /* 页面内容的样式 */
+        #header {
+            display: none; /* 初始隐藏内容，直到加载完成 */
+        }
 
-			#main {
-				display: none; /* 初始隐藏内容，直到加载完成 */
-			}
-		</style>
-	</head>
-	<body id="top">
+        #main {
+            display: none; /* 初始隐藏内容，直到加载完成 */
+        }
+    </style>
+</head>
+<body id="top">
 
-		<!-- Loading Layer -->
-		<div id="loading">
-			<div class="spinner"></div>
-		</div>
+<!-- Loading Layer -->
+<div id="loading">
+    <div class="spinner"></div>
+</div>
 
-		<!-- Header -->
-			<header id="header" name="top">
-				<a class="myImage image avatar"><img src="images/avatar.png" alt="无法显示该图像" /><h1 style="text-align:center;margin-top:10px;"><strong>Gary</strong></h1></a>
-			</header>
+<!-- Header -->
+<header id="header" name="top">
+    <a class="myImage image avatar"><img src="images/avatar.png" alt="无法显示该图像"/>
+        <h1 style="text-align:center;margin-top:10px;"><strong>Gary</strong></h1></a>
+</header>
 
-		<!-- Main -->
-			<div id="main">
+<!-- Main -->
+<div id="main">
 
-				<!-- One -->
-					<section id="one">
-						<h2>技术相关</h2>
-						<br>
-						<h4>使用TensorFlow训练CNN等模型实践</h4>
-						<ul class="actions" style="text-align:right;">
-							<li><a href="https://github.com/2016gary/TensorFlow/" class="button" target="_blank">查看详情</a></li>
-						</ul>
-						<h4>一步一步Backpropagation反向传播示例</h4>
-						<ul class="actions" style="text-align:right;">
-							<li><a href="document/一步一步Backpropagation反向传播示例.pdf" target="_blank" class="button">查看详情</a></li>
-						</ul>
-						<h4>Spring Cloud微服务架构入门教程</h4>
-						<ul class="actions" style="text-align:right;">
-							<li><a href="https://github.com/2016gary/Spring-Cloud/" class="button" target="_blank">查看详情</a></li>
-						</ul>
-						<h4>广告系统架构：如何构建生产环境的广告系统</h4>
-						<ul class="actions" style="text-align:right;">
-							<li><a href="document/广告系统/" class="button" target="_blank">查看详情</a></li>
-						</ul>
-						<h4>Kafka Streams流式计算入门教程</h4>
-						<ul class="actions" style="text-align:right;">
-							<li><a href="https://github.com/2016gary/Stream-Computing/" class="button" target="_blank">查看详情</a></li>
-						</ul>
-						<h4>Spark入门教程</h4>
-						<ul class="actions" style="text-align:right;">
-							<li><a href="document/Spark/" class="button" target="_blank">查看详情</a></li>
-						</ul>
-						<h4>Hadoop MapReduce入门实践</h4>
-						<ul class="actions" style="text-align:right;">
-							<li><a href="https://github.com/2016gary/Hadoop-Streaming/" class="button" target="_blank">查看详情</a></li>
-						</ul>
-						<h4>G1垃圾回收器入门</h4>
-						<ul class="actions" style="text-align:right;">
-							<li><a href="document/JVM/G1/" class="button" target="_blank">查看详情</a></li>
-						</ul>
-						<h4>Java Garbage Collection基础</h4>
-						<ul class="actions" style="text-align:right;">
-							<li><a href="document/JVM/GC/" class="button" target="_blank">查看详情</a></li>
-						</ul>
-						<h4>Cloudera大数据入门教程</h4>
-						<ul class="actions" style="text-align:right;">
-							<li><a href="document/Cloudera大数据/" target="_blank" class="button">查看详情</a></li>
-						</ul>
-						<h4>Cloudera Data Analyst Training-Pig入门教程</h4>
-						<ul class="actions" style="text-align:right;">
-							<li><a href="document/Cloudera_Data_Analyst_Training-Pig.html" target="_blank" class="button">查看详情</a></li>
-						</ul>
-						<!-- <header class="major">
-							<h4>BOW（Bag of Words）模型</h4>
-						</header>
-						<ul class="actions" style="text-align:right;">
-							<li><a href="images/DL/BOW（Bag of Words）.png" class="button fancybox" title="BOW（Bag of Words）">查看详情</a></li>
-						</ul>
-						<header class="major">
-							<h4>Word2Vec模型</h4>
-						</header>
-						<ul class="actions" style="text-align:right;">
-							<li><a href="images/DL/Word2Vec.png" class="button fancybox" title="Word2Vec">查看详情</a></li>
-						</ul> -->
-					</section>
+    <!-- One -->
+    <section id="one">
+        <h2>技术相关</h2>
+        <br>
+        <h4>使用TensorFlow训练CNN等模型实践</h4>
+        <ul class="actions" style="text-align:right;">
+            <li><a href="https://github.com/2016gary/TensorFlow/" class="button" target="_blank">查看详情</a></li>
+        </ul>
+        <h4>一步一步Backpropagation反向传播示例</h4>
+        <ul class="actions" style="text-align:right;">
+            <li><a href="document/一步一步Backpropagation反向传播示例.pdf" target="_blank" class="button">查看详情</a>
+            </li>
+        </ul>
+        <h4>Spring Cloud微服务架构入门教程</h4>
+        <ul class="actions" style="text-align:right;">
+            <li><a href="https://github.com/2016gary/Spring-Cloud/" class="button" target="_blank">查看详情</a></li>
+        </ul>
+        <h4>广告系统架构：如何构建生产环境的广告系统</h4>
+        <ul class="actions" style="text-align:right;">
+            <li><a href="document/广告系统/" class="button" target="_blank">查看详情</a></li>
+        </ul>
+        <h4>Kafka Streams流式计算入门教程</h4>
+        <ul class="actions" style="text-align:right;">
+            <li><a href="https://github.com/2016gary/Stream-Computing/" class="button" target="_blank">查看详情</a></li>
+        </ul>
+        <h4>Spark入门教程</h4>
+        <ul class="actions" style="text-align:right;">
+            <li><a href="document/Spark/" class="button" target="_blank">查看详情</a></li>
+        </ul>
+        <h4>Hadoop MapReduce入门实践</h4>
+        <ul class="actions" style="text-align:right;">
+            <li><a href="https://github.com/2016gary/Hadoop-Streaming/" class="button" target="_blank">查看详情</a></li>
+        </ul>
+        <h4>G1垃圾回收器入门</h4>
+        <ul class="actions" style="text-align:right;">
+            <li><a href="document/JVM/G1/" class="button" target="_blank">查看详情</a></li>
+        </ul>
+        <h4>Java Garbage Collection基础</h4>
+        <ul class="actions" style="text-align:right;">
+            <li><a href="document/JVM/GC/" class="button" target="_blank">查看详情</a></li>
+        </ul>
+        <h4>Cloudera大数据入门教程</h4>
+        <ul class="actions" style="text-align:right;">
+            <li><a href="document/Cloudera大数据/" target="_blank" class="button">查看详情</a></li>
+        </ul>
+        <h4>Cloudera Data Analyst Training-Pig入门教程</h4>
+        <ul class="actions" style="text-align:right;">
+            <li><a href="document/Cloudera_Data_Analyst_Training-Pig.html" target="_blank" class="button">查看详情</a>
+            </li>
+        </ul>
+        <!-- <header class="major">
+            <h4>BOW（Bag of Words）模型</h4>
+        </header>
+        <ul class="actions" style="text-align:right;">
+            <li><a href="images/DL/BOW（Bag of Words）.png" class="button fancybox" title="BOW（Bag of Words）">查看详情</a></li>
+        </ul>
+        <header class="major">
+            <h4>Word2Vec模型</h4>
+        </header>
+        <ul class="actions" style="text-align:right;">
+            <li><a href="images/DL/Word2Vec.png" class="button fancybox" title="Word2Vec">查看详情</a></li>
+        </ul> -->
+    </section>
 
-				<!-- Six -->
-					<!-- <section id="six">
-						<h2>琐碎</h2>
-						<br>
-						<h4>《未命名文件夹》</h4>
-						<ul class="actions" style="text-align:right;">
-							<li><a href="deep/sky_clouds.html" class="button">阅读</a></li>
-						</ul>
-						<h4>《洪水猛兽》</h4>
-						<ul class="actions" style="text-align:right;">
-							<li><a href="deep/whale_fall.html" class="button">阅读</a></li>
-						</ul>
-						<h4>《Frozen Seconds》</h4>
-						<ul class="actions" style="text-align:right;">
-							<li><a href="https://unsplash.com/@mister_gary" target="_blank" class="button">浏览</a></li>
-						</ul>
-						<h4>《窗外》</h4>
-						<ul class="actions" style="text-align:right;">
-							<li><a href="http://v.youku.com/v_show/id_XMTcyNjI0OTE3Mg==.html?spm=a2h0k.8191407.0.0&from=s1.8-1-1.2" target="_blank" class="button">播放</a></li>
-						</ul>
-					</section> -->
-			</div>
-			
-			<a href="#top" style="position: fixed;bottom: 20px;right: 25px;z-index: 100;"><img src="images/top.gif" style="height: 100px;" alt="无法显示该图像" /></a>
+    <!-- Six -->
+    <section id="six">
+        <h2>琐碎</h2>
+        <br>
+        <h4>《未命名文件夹》</h4>
+        <ul class="actions" style="text-align:right;">
+            <li><a href="deep/sky_clouds.html" class="button">阅读</a></li>
+        </ul>
+        <h4>《洪水猛兽》</h4>
+        <ul class="actions" style="text-align:right;">
+            <li><a href="deep/whale_fall.html" class="button">阅读</a></li>
+        </ul>
+        <h4>《Frozen Seconds》</h4>
+        <ul class="actions" style="text-align:right;">
+            <li><a href="https://unsplash.com/@mister_gary" target="_blank" class="button">浏览</a></li>
+        </ul>
+        <h4>《窗外》</h4>
+        <ul class="actions" style="text-align:right;">
+            <li><a href="http://v.youku.com/v_show/id_XMTcyNjI0OTE3Mg==.html?spm=a2h0k.8191407.0.0&from=s1.8-1-1.2"
+                   target="_blank" class="button">播放</a></li>
+        </ul>
+    </section>
+</div>
 
-		<!-- Footer -->
-			<footer id="footer">
-				<ul class="icons">
-					<li><a href="https://github.com/2016gary" target="_blank" class="icon fa-github"><span class="label">Github</span></a></li>
-					<li><a href="mailto:grrbr@sina.com" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
-				</ul>
-				<ul class="copyright">
-					<li>&copy; 2016 - 2026 Gary</li>
-				</ul>
-			</footer>
+<a href="#top" style="position: fixed;bottom: 20px;right: 25px;z-index: 100;"><img src="images/top.gif"
+                                                                                   style="height: 100px;"
+                                                                                   alt="无法显示该图像"/></a>
 
-			<script>
-				window.addEventListener('load', function() {
-					// 等待所有资源加载完成后移除 loading 层
-					const loading = document.getElementById('loading');
-					const header = document.getElementById('header');
-					const main = document.getElementById('main');
+<!-- Footer -->
+<footer id="footer">
+    <ul class="icons">
+        <li><a href="https://github.com/2016gary" target="_blank" class="icon fa-github"><span
+                class="label">Github</span></a></li>
+        <li><a href="mailto:grrbr@sina.com" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+    </ul>
+    <ul class="copyright">
+        <li>&copy; 2016 - 2026 Gary</li>
+    </ul>
+</footer>
 
-					// 等待页面加载完成后，隐藏 loading，显示内容
-					setTimeout(() => {
-						loading.style.display = 'none'; // 隐藏 loading 层
-						header.style.display = 'block'; // 显示页面内容
-						main.style.display = 'block'; // 显示页面内容
-					}, 100); // 你可以调节这个时间，保证样式渲染的时间足够
-				});
-			</script>
-	</body>
+<script>
+    window.addEventListener('load', function () {
+        // 等待所有资源加载完成后移除 loading 层
+        const loading = document.getElementById('loading');
+        const header = document.getElementById('header');
+        const main = document.getElementById('main');
+
+        // 等待页面加载完成后，隐藏 loading，显示内容
+        setTimeout(() => {
+            loading.style.display = 'none'; // 隐藏 loading 层
+            header.style.display = 'block'; // 显示页面内容
+            main.style.display = 'block'; // 显示页面内容
+        }, 100); // 你可以调节这个时间，保证样式渲染的时间足够
+    });
+</script>
+</body>
 </html>
 
