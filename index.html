@@ -68,6 +68,25 @@
         #main {
             display: none; /* 初始隐藏内容，直到加载完成 */
         }
+        #portfolio > .image {
+            width: 210px;
+            padding: 0.75em;
+            margin: 0 1.25em 1.25em 0 !important;
+            border: solid 2px #efefef;
+            border-radius: 0.35em;
+            background: #fff;
+            vertical-align: top;
+        }
+
+        #portfolio > .image:before {
+            display: none;
+        }
+
+        #portfolio > .image img {
+            width: 100%;
+            height: auto;
+            border-radius: 0.25em;
+        }
     </style>
 </head>
 <body id="top">
@@ -86,6 +105,17 @@
 <!-- Main -->
 <div id="main">
 
+    <!-- Portfolio -->
+    <section id="portfolio">
+        <h2>Vibe Coding 应用</h2>
+        <br>
+        <span class="image">
+            <img src="images/note.png" alt="无法显示该图像"/>
+        </span>
+        <span class="image">
+            <img src="images/ai_fun.png" alt="无法显示该图像"/>
+        </span>
+    </section>
     <!-- One -->
     <section id="one">
         <h2>技术相关</h2>
